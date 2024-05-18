@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Bienvenido a mi página</title>
+	<link rel="stylesheet" href="/src/main/resources/static/">
 </head>
 <body>
-    <header>
+    <header id="encabezado">
         <h1>Programación Visual</h1>
-        <nav>
+        <nav class="menu">
             <a href="#inicio">Inicio</a> |
             <a href="#teoria">Teoría</a> |
             <a href="#practica">Práctica</a> |
@@ -15,61 +16,104 @@
         </nav>
     </header>
 
-    <main>
+    <main class="contenido-principal">
         <section id="inicio">
             <h2>Inicio</h2>
             <p>Bienvenido a la programación</p>
         </section>
 
         <section id="teoria">
-            <h3>Teoría</h3>
-            <h2>Programación</h2>
-            <p>“El término programación se define como un conjunto de instrucciones consecutivas y ordenadas que llevan a ejecutar una tarea específica. Dichas instrucciones se denominan 'código fuente', el cual es único para cada lenguaje y está diseñado para cumplir una función o propósito específico.” (Morales, 2014)</p>
+			<h2>Teoría</h2>
+			            <h3>Programación</h3>
+			            <p>“El término programación se define como un conjunto de instrucciones consecutivas y ordenadas que llevan a ejecutar una tarea específica. Dichas instrucciones se denominan 'código fuente', el cual es único para cada lenguaje y está diseñado para cumplir una función o propósito específico.” (Morales, 2014)</p>
+			
+			            <h3>Lenguaje de Programación</h3>
+			            <p>Un lenguaje de programación es una “estructura que, con una cierta base sintáctica y semántica, imparte distintas instrucciones a un programa de computadora” (Perez y Merino, 2009).</p>
+			            <p>Un lenguaje de programación está compuesto por:</p>
+			            <ul>
+			                <li>**Símbolos**</li>
+			                <li>**Reglas sintácticas y semánticas**</li>
+			                <li>**Estructura**</li>
+			                <li>**Significado**</li>
+			                <li>**Elementos y expresiones**</li>
+			            </ul>
+			
+			            <h3>IDE (Entorno de Desarrollo Integrado)</h3>
+			            <p>Los IDE (Integrated Development Environment) son entornos de desarrollo donde es posible escribir, compilar (o interpretar) y ejecutar código en un lenguaje de programación, todo en el mismo programa.</p>
+			            <p>Estos entornos facilitan el desarrollo de aplicaciones al incorporar:</p>
+			            <ul>
+			                <li>**Herramientas de Debug:** tanto textual (mediante una consola) como gráfica.</li>
+			                <li>**Bibliotecas:** componentes ya desarrollados para ser utilizados en el programa.</li>
+			                <li>**Interfaz gráfica:** que facilita y agiliza la escritura de los programas.</li>
+			                <li>**Funcionalidades adicionales:** acceso y gestión de bases de datos, integración con herramientas de control de versiones, simulación de servidores, generación de documentación, gestión de interfaces de usuarios, modelado de artefactos, etc.</li>
+			            </ul>
+			
+			            <h3>Java</h3>
+			            <p>**¿Qué es Java?**  
+			            Java es una tecnología que incluye un lenguaje de programación y una plataforma de desarrollo.</p>
+			            <p>**La plataforma Java**  
+			            Por definición, una plataforma es el ambiente hardware o software sobre el cual se puede ejecutar un programa.</p>
+			            <ul>
+			                <li>**Plataforma Windows:** Un PC con su sistema operativo Windows.</li>
+			                <li>**Plataforma Linux:** Una notebook con una distribución Linux.</li>
+			                <li>**Plataforma Android:** Un celular con Android.</li>
+			            </ul>
+			            <p>La plataforma Java se diferencia porque es una plataforma software que se ejecuta sobre las prestaciones que brinda otra plataforma que gestiona el hardware (plataforma base).</p>
+			            <p>La plataforma Java tiene dos componentes principales:</p>
+			            <ul>
+			                <li>**Java Virtual Machine (JVM):** Es un intérprete que traduce el bytecode al código máquina de la plataforma base al momento de ejecutar la aplicación.</li>
+			                <li>**Java Application Programming Interfaces (API):** Una colección de componentes software organizados en bibliotecas (packages) que proveen muchas capacidades útiles para el desarrollador.</li>
+			            </ul>
+			            <p>**El lenguaje de programación Java**  
+			            Java es un lenguaje de programación de alto nivel definido por sus características: sencillo, orientado a objetos, distribuido, interpretado, robusto, seguro, independiente de las arquitecturas, portable, eficaz, multitarea y dinámico.</p>
+			
+			            <h3>Componentes del lenguaje de programación Java</h3>
+			            <p>En el lenguaje de programación Java, todo el código fuente se escribe en archivos de texto plano con la extensión .java. Estos archivos fuente son entonces compilados por una herramienta de la plataforma denominada compilador javac, guardando el resultado en archivos con el mismo nombre pero con extensión .class. Un archivo .class no contiene código nativo para el procesador de la plataforma base, sino que contiene un tipo de código denominado bytecode (lenguaje binario intermedio). Los bytecode se pueden considerar el lenguaje máquina de la JVM, debido a que la JVM es la encargada de traducir los bytecode en el código máquina del ordenador.</p>
+			
+			            <p>Para realizar esta operación, la plataforma cuenta con una herramienta denominada java launcher, la cual es la encargada de crear una instancia de la JVM y ejecutar la aplicación en esa instancia. El proceso de ejecución de una aplicación java se denomina pseudo interpretado, debido a que existe una primera etapa de compilación a código intermedio (bytecode) y luego una segunda etapa donde se interpreta el código intermedio mediante la JVM.</p>
+			
+			            <p>Esta forma de ejecución permite utilizar una misma aplicación (los bytecode) en diferentes sistemas operativos; siempre y cuando ese sistema operativo disponga de la JVM. Algunas JVM, tales como Java SE HotSpot (la versión creada por Oracle) incorporan tareas adicionales en tiempo de ejecución que aumentan el rendimiento de la aplicación. Entre estas tareas se incluyen encontrar cuellos de botella en el rendimiento y volver a recompilar (en código nativo) secciones de código frecuente.</p>
+			
+			            <h3>Características de Java</h3>
+			            <ul>
+			                <li><strong>Sencillo:</strong> La sintaxis de Java es similar a la de los lenguajes C y C++, pero evita características semánticas que los vuelven complejos, confusos y poco seguros.
+			                    <ul>
+			                        <li>En Java sólo existen tres tipos primitivos: los numéricos (enteros y reales), el tipo carácter y el tipo booleano. Todos los tipos numéricos están firmados.</li>
+			                        <li>En Java, los arreglos, las matrices y las cadenas de caracteres son objetos, lo que facilita su creación y manipulación.</li>
+			                        <li>En Java, el programador no tiene que preocuparse de la gestión de la memoria. Un sistema denominado "el recolector de basura" se encarga de asignar la memoria necesaria a la hora de crear objetos y de liberarla cuando estos ya no se referencian en el dominio del programa.</li>
+			                        <li>En Java, no existen preprocesadores ni archivos de encabezamiento. Las instrucciones “define” de C se sustituyen por constantes en Java y las instrucciones “typedef” de C se reemplazan por clases.</li>
+			                        <li>En C y C++, se definen estructuras y uniones para representar tipos de datos complejos, mientras que, en Java, se crean instancias de clases para representar tipos de datos complejos.</li>
+			                        <li>En C++, una clase puede heredar varias clases, lo que puede generar problemas de ambigüedad. Con el fin de evitar estos problemas, Java sólo autoriza la herencia simple pero aporta un mecanismo de simulación de herencia múltiple mediante la implementación de una o varias interfaces.</li>
+			                        <li>En Java no existe la famosa instrucción goto, simplemente porque aporta una complejidad a la lectura de los programas y porque a menudo se puede prescindir de esta instrucción escribiendo un código más limpio. En Java, se utilizan las instrucciones break y continue, que permiten salir de uno o varios niveles de anidamiento.</li>
+			                        <li>En Java, no es posible sobrecargar los operadores, para evitar problemas de incomprensión del programa. Se preferirá crear clases con métodos y variables de instancia.</li>
+			                        <li>En Java, no hay punteros sino referencias a objetos o celdas de un arreglo o matriz (referenciadas por su índice), para evitar errores comunes en C y C++.</li>
+			                    </ul>
+			                </li>
+			                <li><strong>Orientado a objetos:</strong> Salvo los tipos de datos primitivos, todo en Java es concebido como un objeto. Java se ha provisto de clases incorporadas que encapsulan los tipos primitivos (los wrappers). Esto facilita un mejor dominio de la complejidad, una reutilización más sencilla y una mayor facilidad de corrección y evolución. Java estándar está dotado de un conjunto de clases que permiten crear y manipular todo tipo de objetos (interfaz gráfica, acceso a la red, gestión de entradas/salidas, etc.).</li>
+							<ul>
+							        <li><strong>Distribuido:</strong> Java implementa protocolos de red estándar para desarrollar aplicaciones cliente/servidor en arquitecturas distribuidas, con APIs específicas.</li>
+							        <li><strong>Interpretado:</strong> La ejecución se realiza mediante la JVM, lo que permite portabilidad sin necesidad de recompilar.</li>
+							        <li><strong>Robusto:</strong> Java es fuertemente tipado, verificando errores en compilación y ejecución, y gestiona referencias de objetos para evitar errores.</li>
+							        <li><strong>Seguro:</strong> El JRE se encarga de la seguridad, controlando el acceso a memoria y redes, sin acceso directo a punteros.</li>
+							        <li><strong>Independiente de Arquitecturas:</strong> El compilador genera bytecode independiente de arquitecturas, que la JVM traduce a código nativo.</li>
+							        <li><strong>Portable:</strong> Java es portable gracias a su interpretación, y los tipos de datos primitivos mantienen su tamaño en diferentes plataformas.</li>
+							        <li><strong>Eficaz:</strong> Aunque interpretado, Java utiliza JIT para compilar bytecode a código nativo, alcanzando rendimiento similar a C/C++.</li>
+							        <li><strong>Multitarea:</strong> Java permite ejecutar múltiples hilos simultáneamente, aumentando la velocidad de las aplicaciones.</li>
+							        <li><strong>Dinámico:</strong> No requiere editar vínculos, permitiendo modificar clases sin actualizar todo el programa.</li>
+							    </ul>
+							
+							    <h2>Plataforma Java:</h2>
+							    <ul>
+							        <li><strong>JRE:</strong> Ejecuta aplicaciones Java, instalando la JVM y APIs necesarias, con herramientas de despliegue.</li>
+							        <li><strong>JDK:</strong> Incluye componentes del JRE y agrega el lenguaje Java y herramientas de desarrollo.</li>
+							        <li><strong>Ediciones:</strong> Java SE, JavaFX, Java EE y Java ME, cada una con enfoques específicos y diferentes servicios y herramientas.</li>
+							    </ul>
 
-            <h2>Lenguaje de Programación</h2>
-            <p>Un lenguaje de programación es una “estructura que, con una cierta base sintáctica y semántica, imparte distintas instrucciones a un programa de computadora” (Perez y Merino, 2009).</p>
-            <p>Un lenguaje de programación está compuesto por:</p>
-            <ul>
-                <li>**Símbolos**</li>
-                <li>**Reglas sintácticas y semánticas**</li>
-                <li>**Estructura**</li>
-                <li>**Significado**</li>
-                <li>**Elementos y expresiones**</li>
-            </ul>
-
-            <h2>IDE (Entorno de Desarrollo Integrado)</h2>
-            <p>Los IDE (Integrated Development Environment) son entornos de desarrollo donde es posible escribir, compilar (o interpretar) y ejecutar código en un lenguaje de programación, todo en el mismo programa.</p>
-            <p>Estos entornos facilitan el desarrollo de aplicaciones al incorporar:</p>
-            <ul>
-                <li>**Herramientas de Debug:** tanto textual (mediante una consola) como gráfica.</li>
-                <li>**Bibliotecas:** componentes ya desarrollados para ser utilizados en el programa.</li>
-                <li>**Interfaz gráfica:** que facilita y agiliza la escritura de los programas.</li>
-                <li>**Funcionalidades adicionales:** acceso y gestión de bases de datos, integración con herramientas de control de versiones, simulación de servidores, generación de documentación, gestión de interfaces de usuarios, modelado de artefactos, etc.</li>
-            </ul>
-
-            <h3>Java</h3>
-            <p>**¿Qué es Java?**  
-            Java es una tecnología que incluye un lenguaje de programación y una plataforma de desarrollo.</p>
-            <p>**La plataforma Java**  
-            Por definición, una plataforma es el ambiente hardware o software sobre el cual se puede ejecutar un programa.</p>
-            <ul>
-                <li>**Plataforma Windows:** Un PC con su sistema operativo Windows.</li>
-                <li>**Plataforma Linux:** Una notebook con una distribución Linux.</li>
-                <li>**Plataforma Android:** Un celular con Android.</li>
-            </ul>
-            <p>La plataforma Java se diferencia porque es una plataforma software que se ejecuta sobre las prestaciones que brinda otra plataforma que gestiona el hardware (plataforma base).</p>
-            <p>La plataforma Java tiene dos componentes principales:</p>
-            <ul>
-                <li>**Java Virtual Machine (JVM):** Es un intérprete que traduce el bytecode al código máquina de la plataforma base al momento de ejecutar la aplicación.</li>
-                <li>**Java Application Programming Interfaces (API):** Una colección de componentes software organizados en bibliotecas (packages) que proveen muchas capacidades útiles para el desarrollador.</li>
-            </ul>
-            <p>**El lenguaje de programación Java**  
-            Java es un lenguaje de programación de alto nivel definido por sus características: sencillo, orientado a objetos, distribuido, interpretado, robusto, seguro, independiente de las arquitecturas, portable, eficaz, multitarea y dinámico.</p>
         </section>
 
         <section id="practica">
-            <h3>Práctica</h3>
-            <h2>Ejemplo de Código en Java</h2>
+            <h2>Práctica</h3>
+            <h3>Ejemplos de Código en Java</h2>
             <pre><code>
 public class HolaMundo {
     public static void main(String[] args) {
@@ -77,8 +121,48 @@ public class HolaMundo {
     }
 }
             </code></pre>
-            <h3>Figura 1: Plataforma Java</h3>
-            <img src="ruta/a/tu/imagen/figura1.jpg" alt="Figura 1: Plataforma Java">
+			   <h3>Ejemplos de Estructuras de Control en JavaScript</h3>
+			   <pre><code>
+			/ 1. Estructura if-else
+			ar edad = 18;
+			f (edad >= 18) {
+			   console.log("Eres mayor de edad.");
+			 else {
+			   console.log("Eres menor de edad.");
+			
+			
+			/ 2. Estructura switch
+			ar dia = "Lunes";
+			ar mensaje;
+			witch (dia) {
+			   case "Lunes":
+			       mensaje = "¡Ánimo, es lunes!";
+			       break;
+			   case "Viernes":
+			       mensaje = "¡Por fin es viernes!";
+			       break;
+			   default:
+			       mensaje = "Buen día.";
+			
+			onsole.log(mensaje);
+			
+			/ 3. Bucle for
+			ar i;
+			ar numbers = "";
+			or (i = 1; i <= 5; i++) {
+			   numbers += i + " ";
+			
+			onsole.log(numbers);
+			
+			/ 4. Bucle while
+			ar j = 0;
+			ar countdown = "";
+			hile (j < 5) {
+			   countdown += (5 - j) + " ";
+			   j++;
+			
+			onsole.log(countdown);
+			   </code></pre>
         </section>
 
         <section id="contacto">
@@ -89,21 +173,23 @@ public class HolaMundo {
     </main>
 
     <aside>
-        <h2>Contenido adicional</h2>
-        <p>Visita también:</p>
+        <h2>Fuentes</h2>
+        <p>Bibliografia:</p>
         <ul>
             <li><a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_visual">Wikipedia sobre Programación Visual</a></li>
-            <li><a href="#">Sitio 2</a></li>
+            <li><a href="https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html">Plataforma Java</a></li>
+			<li><a href="https://docs.oracle.com/javase/8/docs/index.html">Componentes de la Plataforma Java</a></li>
+			<li><a href="https://www.oracle.com/technetwork/java/langenv-140151.html">Características del Lenguaje Java</a></li>			
         </ul>
         <img src="ejemplo.jpg" alt="Imagen">
     </aside>
 
-    <footer>
+    <footer id="pie-pagina">
         <p>¡Síguenos en nuestras redes sociales!</p>
         <nav>
-            <a href="#">Facebook</a> |
-            <a href="#">Tiktok</a> |
-            <a href="#">Instagram</a>
+            <a href="https://www.facebook.com/simon.ortegameyer.5/?locale=es_LA">Facebook</a> |
+            <a href="https://www.tiktok.com/@simon_7490">Tiktok</a> |
+            <a href="https://www.instagram.com/simon0rtega/">Instagram</a>
         </nav>
     </footer>
 </body>
