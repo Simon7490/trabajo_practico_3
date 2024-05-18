@@ -1,3 +1,4 @@
+
 #encabezado {
     background-color: #333;
     color: #fff;
@@ -15,7 +16,7 @@
 .menu a {
     color: #333;
     text-decoration: none;
-    padding: 5px 10px;
+    margin-right: 20px;
 }
 
 
@@ -29,39 +30,41 @@
 }
 
 
-.titulo-seccion {
+.seccion h2 {
     color: #333;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
-
-.seccion p,
-.seccion ul,
-.seccion ol,
-.seccion table {
+.seccion h3 {
+    color: #666;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 
-.aside {
+.seccion p, .seccion ul, .seccion ol, .seccion table {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.contenido-adicional {
     background-color: #f9f9f9;
-    padding: 10px;
-    float: right;
-    width: 30%;
+    padding: 15px;
+    margin-top: 20px;
 }
 
 
-.aside a,
-.aside img {
-    display: block;
-    margin-bottom: 10px;
+.contenido-adicional a, .contenido-adicional img {
+    margin-right: 10px;
 }
 
 
 #pie-pagina {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -69,5 +72,4 @@
 #pie-pagina a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
 }
