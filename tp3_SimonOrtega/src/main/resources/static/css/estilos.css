@@ -5,17 +5,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, ol, form, label, input, textarea, selec
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     color: #333;
     padding: 20px;
 }
 
 header {
-    background-color: #333;
+    background-color: #444;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -23,11 +23,11 @@ header h1 {
     margin: 0;
 }
 
-nav.menu {
-    margin: 10px 0;
+nav.navigation {
+    margin: 15px 0;
 }
 
-nav.menu a {
+nav.navigation a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
@@ -35,22 +35,26 @@ nav.menu a {
     display: inline-block;
 }
 
-nav.menu a:hover {
-    background-color: #575757;
+nav.navigation a:hover {
+    background-color: #666;
     border-radius: 5px;
 }
 
-main.contenido-principal {
+main {
     margin: 20px 0;
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h2 {
     margin-bottom: 10px;
     color: #444;
+}
+
+h3, h4 {
+    color: #555;
 }
 
 form fieldset {
@@ -61,7 +65,7 @@ form fieldset {
 }
 
 form legend {
-    padding: 0 5px;
+    padding: 0 10px;
     font-weight: bold;
     color: #444;
 }
@@ -80,7 +84,7 @@ form legend {
 .form-group input[type="number"],
 .form-group input[type="date"],
 .form-group input[type="password"],
-.form-group textarea,
+.form-group input[type="tel"],
 .form-group select {
     width: 100%;
     padding: 8px;
@@ -88,13 +92,8 @@ form legend {
     border-radius: 5px;
 }
 
-.form-group input[type="radio"],
-.form-group input[type="checkbox"] {
-    margin-right: 10px;
-}
-
 .form-group input[type="submit"] {
-    background-color: #333;
+    background-color: #444;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -103,14 +102,14 @@ form legend {
 }
 
 .form-group input[type="submit"]:hover {
-    background-color: #575757;
+    background-color: #666;
 }
 
 footer {
-    background-color: #333;
+    background-color: #444;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     margin-top: 20px;
     border-radius: 5px;
 }
@@ -128,36 +127,12 @@ footer nav a {
 }
 
 footer nav a:hover {
-    background-color: #575757;
+    background-color: #666;
     border-radius: 5px;
-}
-
-aside {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin-bottom: 10px;
-}
-
-aside img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
 }
 
 pre {
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -166,5 +141,8 @@ pre {
 }
 
 code {
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #eaeaea;
+    padding: 2px 4px;
+    border-radius: 4px;
 }

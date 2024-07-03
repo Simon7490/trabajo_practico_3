@@ -2,24 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro de Cliente</title>
-    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/estilos.css">
+    <title>Programacion Visual</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-	<header id="encabezado">
-	    <h1>Programación Visual</h1>
-	    <nav class="menu">
-	        <a href="#inicio">Inicio</a> |
-	        <a href="#teoria">Teoría</a> |
-	        <a href="#practica">Práctica</a> |
-	        <a href="#contacto">Contacto</a>
-	    </nav>
-		<h2>Formulario</h2>
-	</header>
-    <main class="contenido-principal">
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Información Personal</legend>
+    <header id="header">
+        <h1>Recursos de Programación: Java y HTML</h1>
+        <nav class="navigation">
+            <a href="#intro">Introducción</a>
+            <a href="#java">Java</a>
+            <a href="#html">HTML</a>
+			<a href="#fuentes">Fuentes</a>
+
+            <a href="form-cliente.html">Formulario</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form">
+            <h2>Registro</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos Personales</legend>
                 
                 <div class="form-group">
                     <label for="dni">DNI:</label>
@@ -101,25 +105,20 @@
                 </div>
             </fieldset>
 
-            <fieldset>
-                <legend>Preferencias</legend>
-
-                <div class="form-group">
-                    <label>Categorías de Interés:</label>
-                    <input type="checkbox" id="categoria1" name="categorias" value="categoria1">
-                    <label for="categoria1">Teoría</label>
-                    <input type="checkbox" id="categoria2" name="categorias" value="categoria2">
-                    <label for="categoria2">Práctica</label>
-                    <input type="checkbox" id="categoria3" name="categorias" value="categoria3">
-                    <label for="categoria3">Fuentes</label>
-                </div>
-
-                <div class="form-group">
-                    <label for="sugerencias">Sugerencias para la empresa:</label>
-                    <textarea id="sugerencias" name="sugerencias" rows="4" cols="50"></textarea>
-                </div>
-            </fieldset>
-
+			<fieldset>
+			                    <legend>Preferencias</legend>
+			
+			                    <div class="form-group">
+			                        <label for="lenguajes">Lenguajes de Programación Favoritos:</label>
+			                        <select id="lenguajes" name="lenguajes[]" multiple>
+			                            <option value="python">Python</option>
+			                            <option value="javascript">JavaScript</option>
+			                            <option value="java">Java</option>
+			                            <option value="csharp">C++</option>
+			                            <option value="ruby">Ruby</option>
+			                        </select>
+			                    </div>
+			                </fieldset>
             <fieldset>
                 <legend>Seguridad</legend>
 
@@ -147,14 +146,16 @@
                 <input type="submit" value="Registrar">
             </div>
         </form>
+		
     </main>
-    <footer id="pie-pagina">
-        <p>¡Síguenos en nuestras redes sociales!</p>
-        <nav>
-            <a href="https://www.facebook.com/simon.ortegameyer.5/?locale=es_LA">Facebook</a> |
-            <a href="https://www.tiktok.com/@simon_7490">Tiktok</a> |
-            <a href="https://www.instagram.com/simon0rtega/">Instagram</a>
-        </nav>
-    </footer>
-</body>
-</html>
+	   <footer>
+		       <p>&copy; 2024 Recursos de Programación | Camila Ramos</p>
+	       <nav>
+	           <a href="https://www.facebook.com">Facebook</a> |
+	           <a href="https://www.twitter.com">Twitter</a> |
+	           <a href="https://www.instagram.com">Instagram</a>
+	       </nav>
+	   </footer>
+	</body>
+	</html>
+
